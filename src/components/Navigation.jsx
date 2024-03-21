@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom'
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['About', 'Resume', 'Contact', 'Portfolio'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navigation() {
@@ -93,7 +93,7 @@ function Navigation() {
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">
                                         <Link to={`/${page}`}>
-                                        {page}
+                                            {page}
                                         </Link>
                                     </Typography>
                                 </MenuItem>
@@ -126,7 +126,9 @@ function Navigation() {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                {page}
+                                <Link style={{textDecoration: "none", color:"white"}} to={`/${page}`}>
+                                            {page}
+                                        </Link>
                             </Button>
                         ))}
                     </Box>

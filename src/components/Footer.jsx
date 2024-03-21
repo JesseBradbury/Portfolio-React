@@ -13,15 +13,7 @@ function Footer() {
             <Grid container spacing={2}>
                 <Grid xs display="flex" justifyContent="center" alignItems="center">
 
-                    <Link sx={{
-                            
-                            display: { xs: 'none', md: 'flex' },
-                            
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            // color: 'inherit',
-                            // textDecoration: 'none',
-                        }}
+                    <Link 
                         style={{fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "blue" }} 
                         to="https://www.linkedin.com/in/jessebradbury/" >LinkedIn</Link>
 

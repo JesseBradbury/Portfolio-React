@@ -17,8 +17,8 @@ import SendIcon from '@mui/icons-material/Send';
 export default function Contact() {
     return (
         <div>
-                <Paper>
-            <Container>
+            <Paper>
+                <Container>
 
                     <div>
                         <h2>Contact Me</h2>
@@ -34,11 +34,14 @@ export default function Contact() {
                     <Grid>
                         <TextField fullWidth label="Message" id="message outlined-multiline-flexible " multiline maxRows={4} margin="normal" />
                     </Grid>
+                    <Grid sx={{py:2}}>
+
                     <Button variant="contained" endIcon={<SendIcon />}>
-        Send
-      </Button>
-            </Container>
-                </Paper>
+                        Send
+                    </Button>
+                    </Grid>
+                </Container>
+            </Paper>
 
 
         </div>

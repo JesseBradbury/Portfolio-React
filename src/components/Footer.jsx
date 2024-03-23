@@ -10,7 +10,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 function Footer() {
     return (
         <Container maxWidth="sm">
-            <Grid container spacing={2}>
+            <Grid container spacing={2} sx={{py:2}}>
                 <Grid xs display="flex" justifyContent="center" alignItems="center">
 
                     <Link 

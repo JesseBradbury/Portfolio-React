@@ -25,10 +25,10 @@ export default function Contact() {
                     </div>
                     <Grid container spacing={2}>
                         <Grid xs={12} sm={5}>
-                            <TextField required id="outlined-basic" label="Name" variant="outlined" />
+                            <TextField required id="name outlined-basic" label="Name" variant="outlined" />
                         </Grid>
                         <Grid xs={12} sm={6}>
-                            <TextField required id="outlined-basic" label="e-mail" variant="outlined" />
+                            <TextField required id="mail outlined-basic" label="e-mail" variant="outlined" />
                         </Grid>
                     </Grid>
                     <Grid>

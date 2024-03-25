@@ -12,10 +12,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
+
 import { Link } from 'react-router-dom'
 
-const pages = ['About', 'Resume', 'Contact', 'Portfolio'];
+const pages = ['about', 'resume', 'contact', 'portfolio'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navigation() {
@@ -41,7 +41,7 @@ function Navigation() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+                    
                     <Typography
                         variant="h6"
                         noWrap
@@ -61,6 +61,7 @@ function Navigation() {
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        {/* This is the accordian that has the menu items when the display goes to a smaller size. */}
                         <IconButton
                             size="large"
                             aria-label="account of current user"

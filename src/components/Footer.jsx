@@ -3,6 +3,7 @@ import { Container } from "@mui/material"
 import { Link } from "react-router-dom"
 
 import Grid from '@mui/material/Unstable_Grid2';
+import Box from '@mui/material/Box';
 
 
 
@@ -10,22 +11,25 @@ import Grid from '@mui/material/Unstable_Grid2';
 function Footer() {
     return (
         <Container maxWidth="sm">
-            <Grid container spacing={2} sx={{py:2}}>
-                <Grid xs display="flex" justifyContent="center" alignItems="center">
+            <Box sx={{ p: 2 }}>
 
-                    <Link 
-                        style={{fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "blue" }} 
-                        to="https://www.linkedin.com/in/jessebradbury/" >LinkedIn</Link>
+                <Grid container spacing={2} sx={{ py: 2 }}>
+                    <Grid xs display="flex" justifyContent="center" alignItems="center">
 
+                        <Link
+                            style={{ fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "blue" }}
+                            to="https://www.linkedin.com/in/jessebradbury/" >LinkedIn</Link>
+
+                    </Grid>
+
+                    <Grid xs display="flex" justifyContent="center" alignItems="center">
+
+                        <Link style={{ fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "blue" }} to="https://github.com/JesseBradbury" >GitHub</Link>
+
+                    </Grid>
                 </Grid>
 
-                <Grid xs display="flex" justifyContent="center" alignItems="center">
-
-                    <Link style={{fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "blue" }}  to="https://github.com/JesseBradbury" >GitHub</Link>
-
-                </Grid>
-            </Grid>
-
+            </Box>
 
         </Container>
     )

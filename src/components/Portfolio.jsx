@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Unstable_Grid2';
 // import { Item } from '@mui/material';
 import Card from '@mui/material/Card';
+import { Paper } from "@mui/material";
 import { CardActionArea } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -42,38 +43,41 @@ const ProjectData = [
 
 export default function ProjectCard() {
     return (
-        <Container maxWidth="md">
-            <Grid container rowSpacing={1} columnSpacing={2}>
-                {ProjectData.map((project) => (
-                    <Grid key={project.id} xs={12} md={6}>
+        <Paper>
+            <h2>Portfolio</h2>
+            <Container maxWidth="md">
+                <Grid container rowSpacing={1} columnSpacing={2}>
+                    {ProjectData.map((project) => (
+                        <Grid key={project.id} xs={12} md={6}>
 
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardActionArea>
-                        <Link to={`/portfolio/${project.id}`} style={{ textDecoration: 'none' }}>
-                                <CardMedia
-                                    sx={{ height: 140 }}
-                                    image={project.picture}
-                                    title={project.title}
-                                    />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {project.title}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        {project.description}
-                                    </Typography>
-                                </CardContent>
-                </Link>
-                            </CardActionArea>
-                            <CardActions>
-                                <Button size="small" href={`https://${project.githubUrl}`} target="_blank">GitHub</Button>
-                                <Button size="small" href={`https://${project.liveUrl}`} target="_blank">Live Application</Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
-        </Container>
+                            <Card sx={{ maxWidth: 345 }}>
+                                <CardActionArea>
+                                    <Link to={`/portfolio/${project.id}`} style={{ textDecoration: 'none' }}>
+                                        <CardMedia
+                                            sx={{ height: 140 }}
+                                            image={project.picture}
+                                            title={project.title}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {project.title}
+                                            </Typography>
+                                            <Typography variant="body2" color="text.secondary">
+                                                {project.description}
+                                            </Typography>
+                                        </CardContent>
+                                    </Link>
+                                </CardActionArea>
+                                <CardActions>
+                                    <Button size="small" href={`https://${project.githubUrl}`} target="_blank">GitHub</Button>
+                                    <Button size="small" href={`https://${project.liveUrl}`} target="_blank">Live Application</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
+        </Paper>
     );
 }
 

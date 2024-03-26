@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 
 const ProjectData = [
     {
-        id: "plants",
+        id: "Plants",
         title: "All About Plants",
         description: "This is a description of my prjoect",
         picture: `/projects/plants.png`,
@@ -22,21 +22,45 @@ const ProjectData = [
         liveUrl: "nicklearning.github.io/plant-info-project/",
     },
     {
-        id: "2",
-        title: "Project 2",
+        id: "Slinky",
+        title: "Slinkly World",
         description: "This is a description of my prjoect",
-        picture: "reference to a picture",
-        githubUrl: "www.github.com",
-        liveUrl: "www.github.com",
+        picture: `/projects/slinky2.png`,
+        githubUrl: "github.com/JesseBradbury/Slinky-Project",
+        liveUrl: "slinkyworld-4cca5764620e.herokuapp.com",
     },
     {
-        id: "3",
-        title: "Project 3",
+        id: "EmployeeSQLDb",
+        title: "SQL Employee Database",
+        description: "This is a description of my project",
+        picture: `/projects/employee.png`,
+        githubUrl: "github.com/JesseBradbury/SQL-Employee-Tracker",
+        liveUrl: "drive.google.com/file/d/1XsMCYRmnw50NkaLL_iGuNyXui3OJgWNM/view",
+    },
+    {
+        id: "StoreSQLDb",
+        title: "SQL Online Store Backend",
         description: "This is a description of my prjoect",
-        picture: "reference to a picture",
-        githubUrl: "www.github.com",
-        liveUrl: "www.github.com",
-    }
+        picture: `/projects/store.png`,
+        githubUrl: "github.com/JesseBradbury/e-commerce-back-end",
+        liveUrl: "drive.google.com/file/d/1FF2ldrJMYF1dmnvlftoKoNbggUsHE8yB/view",
+    },
+    {
+        id: "socialMongoDb",
+        title: "Social Media MongoDb",
+        description: "This is a description of my prjoect",
+        picture: `/projects/socials.png`,
+        githubUrl: "github.com/JesseBradbury/Social-Network-API-mongodb",
+        liveUrl: "slinkyworld-4cca5764620e.herokuapp.com",
+    },
+    {
+        id: "Schedule",
+        title: "Schedule App",
+        description: "This is a description of my prjoect",
+        picture: `/projects/schedule.png`,
+        githubUrl: "github.com/JesseBradbury/Work-Day-Scheduler?tab=readme-ov-file",
+        liveUrl: "jessebradbury.github.io/Work-Day-Scheduler/",
+    },
 ]
 
 export default function ProjectCard() {

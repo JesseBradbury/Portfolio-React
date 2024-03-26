@@ -5,7 +5,7 @@
 // WHEN I enter text into the email address field
 // THEN I receive a notification if I have entered an invalid email address
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TextField, Container } from "@mui/material"
 
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
@@ -13,7 +13,7 @@ import { Paper } from "@mui/material";
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
-
+// This sets the current state of all the forms and the possible errors. 
 export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -21,6 +21,7 @@ export default function Contact() {
     const [nameError, setNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
 
+    // This check to see if there is a valid name and email, and sets the name error to true if they are empty or do not match the regEx for validating an email. 
     const handleSubmit = (e) => {
         e.preventDefault();
         // Validate name and email
@@ -45,7 +46,7 @@ export default function Contact() {
             setMessage('');
         }
     };
-
+// Reg ex to validate the email
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
@@ -70,6 +71,7 @@ export default function Contact() {
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 error={nameError}
+                                // if the nameError is true, it displays, if not ''
                                 helperText={nameError ? 'Name is required' : ''}
                             />
                         </Grid>
@@ -114,8 +116,6 @@ export default function Contact() {
                     </form>
                 </Container>
             </Paper>
-
-
         </div>
     )
 }

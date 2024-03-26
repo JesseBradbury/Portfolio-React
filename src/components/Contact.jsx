@@ -11,6 +11,7 @@ import { TextField, Container } from "@mui/material"
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 import { Paper } from "@mui/material";
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography'
 import SendIcon from '@mui/icons-material/Send';
 
 // This sets the current state of all the forms and the possible errors. 
@@ -55,10 +56,10 @@ export default function Contact() {
     return (
         <div>
             <Paper>
-                <Container>
+                <Container sx={{ p: 2 }}>
 
                     <div>
-                        <h2>Contact Me</h2>
+                        <Typography variant="h3" >Contact Me</Typography>
                     </div>
                     <form onSubmit={handleSubmit}>
                     <Grid container spacing={2}>

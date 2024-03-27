@@ -17,14 +17,14 @@ function Footer() {
                     <Grid xs display="flex" justifyContent="center" alignItems="center">
 
                         <Link
-                            style={{ fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "blue" }}
+                            style={{ fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "gray" }}
                             to="https://www.linkedin.com/in/jessebradbury/" >LinkedIn</Link>
 
                     </Grid>
 
                     <Grid xs display="flex" justifyContent="center" alignItems="center">
 
-                        <Link style={{ fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "blue" }} to="https://github.com/JesseBradbury" >GitHub</Link>
+                        <Link style={{ fontFamily: 'roboto', fontWeight: 400, textDecoration: "none", color: "gray" }} to="https://github.com/JesseBradbury" >GitHub</Link>
 
                     </Grid>
                 </Grid>

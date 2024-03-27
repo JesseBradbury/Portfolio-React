@@ -8,8 +8,7 @@ import {
 
 
 // Styles
-import './index.css';
-import { createTheme, ThemeProvider } from '@mui/material';
+import {  ThemeProvider } from '@mui/material/styles';
 
 
 // Fonts for Material Ui
@@ -18,6 +17,9 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+
+import './index.css';
+import {theme} from "./utils/theme"
 
 // Main Routes
 import Root from './routes/root'
@@ -63,46 +65,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-// Theme for Material Ui
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#A3B4A2",
-      dark: "#5C715B"
-    },
-    secondary: {
-      main: "#E09891",
-    },
-  },
-  typography: {
 
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-
-    h1: {
-      fontSize: "3rem",
-      fontWeight: 600,
-    },
-    h2: {
-      fontSize: "1.75rem",
-      fontWeight: 600,
-    },
-    h3: {
-      fontSize: "1.5rem",
-      fontWeight: 600,
-    },
-  }
-})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

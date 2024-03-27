@@ -1,9 +1,3 @@
-// WHEN I am presented with the Contact section
-// THEN I see a contact form with fields for a name, an email address, and a message
-// WHEN I move my cursor out of one of the form fields without entering text
-// THEN I receive a notification that this field is required
-// WHEN I enter text into the email address field
-// THEN I receive a notification if I have entered an invalid email address
 
 import { useState } from 'react';
 import { TextField, Container } from "@mui/material"
@@ -15,45 +9,6 @@ import Typography from '@mui/material/Typography'
 import SendIcon from '@mui/icons-material/Send';
 import { createTheme, ThemeProvider } from '@mui/material';
 
-const theme = createTheme({
-    palette: {
-      primary: {
-        main: "#A3B4A2",
-        dark: "#5C715B"
-      },
-      secondary: {
-        main: "#E09891",
-      },
-    },
-    typography: {
-  
-      fontFamily: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-      ].join(','),
-  
-      h1: {
-        fontSize: "3rem",
-        fontWeight: 600,
-      },
-      h2: {
-        fontSize: "1.75rem",
-        fontWeight: 600,
-      },
-      h3: {
-        fontSize: "1.5rem",
-        fontWeight: 600,
-      },
-    }
-  })
 
 // This sets the current state of all the forms and the possible errors. 
 export default function Contact() {
@@ -128,13 +83,7 @@ export default function Contact() {
                                 error={emailError}
                                 helperText={emailError ? 'Provide a valid e-mail' : ''}
                             />
-                            {/* <TextField
-                                error
-                                id="mail outlined-error-helper-text"
-                                label="Error"
-                                defaultValue="e-mail"
-                                helperText="Provide valid e-mail"
-                            /> */}
+                            
                         </Grid>
                     </Grid>
                     <Grid>
@@ -151,7 +100,7 @@ export default function Contact() {
                     </Grid>
                     <Grid sx={{ py: 2 }}>
 
-                        <Button type="submit" variant="contained" endIcon={<SendIcon />} sx={{ backgroundColor: theme.palette.primary.main }}>
+                        <Button type="submit" variant="contained" endIcon={<SendIcon />} sx={{ color: "primary" }}>
                             Send
                         </Button>
                     </Grid>

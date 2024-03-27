@@ -12,6 +12,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 import { Link } from 'react-router-dom'
 
@@ -36,9 +37,51 @@ function Navigation() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-
+    const theme = createTheme({
+        palette: {
+          primary: {
+            main: "#A3B4A2",
+            dark: "#A3B4A2"
+          },
+          secondary: {
+            main: "#A3B4A2",
+          },
+      
+          info: {
+            main: "#A3B4A2",
+          },
+        },
+        typography: {
+      
+          fontFamily: [
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+          ].join(','),
+      
+          h1: {
+            fontSize: "3rem",
+            fontWeight: 600,
+          },
+          h2: {
+            fontSize: "1.75rem",
+            fontWeight: 600,
+          },
+          h3: {
+            fontSize: "1.5rem",
+            fontWeight: 600,
+          },
+        }
+      })
     return (
-        <AppBar color="primary" position="static">
+        <AppBar position="static" sx={{ backgroundColor: theme.palette.primary.main }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
 
@@ -137,11 +180,11 @@ function Navigation() {
                     <Box sx={{ flexGrow: 0 }}>
                         {/* Future feature with settings for light mode and dark mode and other website settings. */}
                         {/* <Tooltip title="Open settings"> */}
-                            {/* <IconButton 
+                        {/* <IconButton 
                             onClick={handleOpenUserMenu} 
                             sx={{ p: 0 }}> */}
-                                <Avatar alt="Jesse Bradbury" src="/images/avatar.png" />
-                            {/* </IconButton> */}
+                        <Avatar alt="Jesse Bradbury" src="/images/avatar.png" />
+                        {/* </IconButton> */}
                         {/* </Tooltip> */}
                         <Menu
                             sx={{ mt: '45px' }}

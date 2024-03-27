@@ -13,6 +13,47 @@ import { Paper } from "@mui/material";
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography'
 import SendIcon from '@mui/icons-material/Send';
+import { createTheme, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#A3B4A2",
+        dark: "#5C715B"
+      },
+      secondary: {
+        main: "#E09891",
+      },
+    },
+    typography: {
+  
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+  
+      h1: {
+        fontSize: "3rem",
+        fontWeight: 600,
+      },
+      h2: {
+        fontSize: "1.75rem",
+        fontWeight: 600,
+      },
+      h3: {
+        fontSize: "1.5rem",
+        fontWeight: 600,
+      },
+    }
+  })
 
 // This sets the current state of all the forms and the possible errors. 
 export default function Contact() {
@@ -110,7 +151,7 @@ export default function Contact() {
                     </Grid>
                     <Grid sx={{ py: 2 }}>
 
-                        <Button type="submit" variant="contained" endIcon={<SendIcon />}>
+                        <Button type="submit" variant="contained" endIcon={<SendIcon />} sx={{ backgroundColor: theme.palette.primary.main }}>
                             Send
                         </Button>
                     </Grid>

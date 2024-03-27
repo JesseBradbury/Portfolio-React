@@ -38,7 +38,7 @@ function Navigation() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar color="primary" position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
 
